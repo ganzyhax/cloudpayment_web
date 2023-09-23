@@ -129,19 +129,19 @@ function pay() {
     }, {
 
       onSuccess: function(options) { // success
-        sendMessageToFlutter('Success');
+        //sendMessageToFlutter('Success');
         //действие при успешной оплате
 
       },
 
       onFail: function(reason, options) { // fail
-        sendMessageToFlutter('Fail');
+      //  sendMessageToFlutter('Fail');
         //действие при неуспешной оплате
 
       },
 
       onComplete: function(paymentResult, options) { //Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
-        sendMessageToFlutter(paymentResult);
+     //   sendMessageToFlutter(paymentResult);
         //например вызов вашей аналитики Facebook Pixel
 
       }
