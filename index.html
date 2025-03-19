@@ -8,7 +8,7 @@
 
     <title>Payment Jetu</title>
 
-    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments"></script>
+    <script src="https://widget.tiptoppay.kz/bundles/widget.js"></script>
 
 </head>
 
@@ -88,11 +88,9 @@ function sendMessageToFlutter(message) {
 }
 function pay() {
 
-  var widget = new cp.CloudPayments({
-
-    language: language
-
-  });
+  var widget = new tiptop.Widget({
+                language: language
+            });
     
     var amount='1000';
       var sPageURL = window.location.search.substring(1);
