@@ -78,7 +78,10 @@ input {
 <script  type="text/javascript">
 document.addEventListener('input', function(e) {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-    e.target.value = e.target.value.replace(/apple/gi, '');
+    e.target.value = e.target.value.replace("apple", '');
+    if(e.target.value=="apple"){
+        console.log("aaaa!!!!!!!!!!!");
+    }
   }
 });
 let btn = document.getElementById("payButton")
