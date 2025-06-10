@@ -76,7 +76,11 @@ input {
 </style>
 
 <script  type="text/javascript">
-
+document.addEventListener('input', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+    e.target.value = e.target.value.replace(/apple/gi, '');
+  }
+});
 let btn = document.getElementById("payButton")
 
 //let language = navigator.language //or fix
