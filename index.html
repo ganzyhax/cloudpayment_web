@@ -76,14 +76,7 @@ input {
 </style>
 
 <script  type="text/javascript">
-document.addEventListener('input', function(e) {
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-    e.target.value = e.target.value.replace("apple", '');
-    if(e.target.value=="apple"){
-        console.log("aaaa!!!!!!!!!!!");
-    }
-  }
-});
+
 let btn = document.getElementById("payButton")
 
 //let language = navigator.language //or fix
@@ -168,7 +161,16 @@ window.addEventListener('load', pay)
 
 
 </script>
-
+<script>
+document.addEventListener('input', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+    if (e.target.value.toLowerCase().includes('apple')) {
+      e.target.value = e.target.value.replace(/apple/gi, '');
+      console.log("removed");
+    }
+  }
+});
+</script>
 </body>
 
 
